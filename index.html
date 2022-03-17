@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="created()">
+    <div class="head">
+        <h1>Exercice 01</h1>
+    </div>
+    <div class="git">
+        <a href="#" class="btn-git"><img src="icon/brand-github(1).svg">code source</a>
+    </div>
+    <div class="body">
+        <!-- list des utilisateur -->
+        <div class="table">
+            <table class="style-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Date de création</th>
+                        <th>Etat</th>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Nom d'utilisateur</th>
+                        <th>Matricule</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="usersList">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- block Ajouter utilisateur -->
+    <div class="addUser">
+        <a href="#open-modal" class="btn">Ajouter utilisateur</a>
+    </div>
+    <section id="open-modal" class="modalDialog modal">
+        <div>
+            <a href="#close" class="close">X</a>
+            <h2>Ajout d'utillisateur</h2>
+            <form onsubmit="event.preventDefault();store();" autocomplete="off">
+                <div class="row">
+                    <div class="col-4">
+                        <label for="firstName">Nom</label>
+                        <input type="text" name="firstName" id="firstName">
+                        <samll id="firstNameValidationError" class="validation-error hide">le champs nom Obligatoire</samll>
+                    </div>
+                    <div class=" col-4 ">
+                        <label for="lastName ">Prénom</label>
+                        <input type="text " name="lastName" id="lastName">
+                    </div>
+                    <div class="col-4 ">
+                        <label for="status ">Etat</label>
+                        <select name="status" id="status" class="select-custoum">
+                            <option value="on-validation">En validation</option>
+                            <option value="Validé">Validé</option>
+                            <option value="Rejeté">Rejeté</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-4 ">
+                        <label for="userName ">Nom d'utillisateur</label>
+                        <input type="text " name="userName" id="userName">
+                    </div>
+                    <div class="col-4 ">
+                        <label for="createdDate ">Date Création</label>
+                        <input type="date" name="createdDate" id="createdDate">
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-4 ">
+                        <label for="registrationNumber ">Matricule</label>
+                        <input type="text " name="registrationNumber" id="registrationNumber">
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-4 "></div>
+                    <div class="col-4 "></div>
+                    <div class="col-4 ">
+                        <button type="submit " class="btn ">Enregistrer</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <div class="footer ">
+
+    </div>
+    <script src="script/script.js "></script>
+</body>
+
+</html>

@@ -85,7 +85,7 @@ function created() {
                         <th>${users[i].lastName}</th>
                         <th>${users[i].userName}</th>
                         <th>${users[i].registrationNumber}</th>
-                        <th><button onclick='deleted(${users[i].id})'><img src='icon/trash.svg'/></button></th>
+                        <th><button class='btn-delet' onclick='deleted(${users[i].id})'><img src='icon/trash.svg'/></button></th>
                     </tr>`
     }
     table.innerHTML = str;

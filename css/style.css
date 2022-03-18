@@ -49,6 +49,7 @@ a:hover,a:active{
 .btn-delet{
     background:transparent;
     cursor: pointer;
+    border:none;
 }
 
 .rejected{
